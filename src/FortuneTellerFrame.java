@@ -60,7 +60,9 @@ public class FortuneTellerFrame extends JFrame
     private void createMiddlePanel()
     {
         middlePnl = new JPanel();
-        displayTA = new JTextArea(20, 30);
+        displayTA = new JTextArea(10, 25);
+        Font font = new Font("Verdana", Font.BOLD, 20);
+        displayTA.setFont(font);
         displayTA.setEditable(false);
         scroller = new JScrollPane(displayTA);
         middlePnl.add(scroller);
@@ -89,7 +91,7 @@ public class FortuneTellerFrame extends JFrame
         bottomPnl = new JPanel();
         bottomPnl.setLayout(new GridLayout(1, 2));
         helloBtn = new JButton("Ready my fortune");
-        helloBtn.setFont(new Font("Arial", Font.ITALIC, 18));
+        helloBtn.setFont(new Font("Arial", Font.ITALIC, 20));
         helloBtn.setBackground(Color.BLUE);
         helloBtn.setForeground(Color.PINK);
         helloBtn.addActionListener((ActionEvent ae) ->
